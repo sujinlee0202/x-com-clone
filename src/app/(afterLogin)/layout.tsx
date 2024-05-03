@@ -3,6 +3,8 @@ import styles from "./layout.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import zlogo from "@/../public/zlogo.png";
+import NavMenu from "./_component/NavMenu";
+import LogoutButton from "./_component/LogoutButton";
 
 type Props = {
   children: ReactNode;
@@ -20,6 +22,15 @@ export default function Layout({ children }: Props) {
                 <Image src={zlogo} alt='z.com logo' width={40} height={40} />
               </div>
             </Link>
+            <nav>
+              <ul>
+                <NavMenu />
+              </ul>
+              <Link href='/compose/tweet' className={styles.postButton}>
+                게시하기
+              </Link>
+            </nav>
+            <LogoutButton />
           </div>
         </section>
       </header>
