@@ -9,7 +9,7 @@ export default function LogoutButton() {
     // 임시로 내 정보 있는것처럼
     id: "titch",
     nickname: "titch",
-    image: "/titch.jpg", // 서버에서 이미지 불러올 예정
+    image: "/zlogo.png", // 서버에서 이미지 불러올 예정
   };
 
   const onLogout = () => {};

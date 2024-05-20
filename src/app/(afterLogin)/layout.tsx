@@ -5,6 +5,8 @@ import Image from "next/image";
 import zlogo from "@/../public/zlogo.png";
 import NavMenu from "./_component/NavMenu";
 import LogoutButton from "./_component/LogoutButton";
+import TrendSection from "./_component/TrendSection";
+import FollowRecommend from "./_component/FollowRecommend";
 
 type Props = {
   children: ReactNode;
@@ -38,9 +40,13 @@ export default function Layout({ children }: Props) {
         <div className={styles.rightSectionInner}>
           <main className={styles.main}>{children}</main>
           <section className={styles.rightSection}>
-            <form className={styles.search}>
-              <input type='text'></input>
-            </form>
+            <div style={{ marginBottom: 60, width: "inherit" }}>
+              <form className={styles.search}>
+                <input type='text'></input>
+              </form>
+            </div>
+            <TrendSection />
+            <FollowRecommend />
           </section>
         </div>
       </div>
